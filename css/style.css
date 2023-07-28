@@ -1,0 +1,17 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    
+}
+
+
+.container{
+    
+    background-image: linear-gradient(to right,#80cef3,rgb(218, 223, 224));
+    border-radius: 2rem;
+    box-shadow: 10px 10px 5px lightblue;
+}
+#update
+{
+    display: none;
+}

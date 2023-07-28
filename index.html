@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="fontawesome-free-6.2.0-web/css/all.min.css" />
+    <title>CRUD operations</title>
+  </head>
+  <body>
+    <div class="home p-5">
+      <div class="container d-flex justify-content-center align-items-center">
+        <div class="w-75 p-5">
+          <h1 class="text-white mb-5 text-center">CRUD System</h1>
+          <input
+            type="text"
+            class="form-control mb-3 "
+            id="productName"
+            placeholder="ProductName"
+            required
+          />
+          <div id="nameAlert" class="alert alert-danger d-none p-2 mt-2">Product name should start with capital letter</div>
+          <input
+            type="number"
+            class="form-control mb-3"
+            id="productPrice"
+            placeholder="ProductPrice"
+            required
+          />
+          <div id="priceAlert" class="alert alert-danger d-none p-2 mt-2">Product price should be atleast 3 numbers</div>
+
+          <input
+            type="text"
+            class="form-control mb-3"
+            id="productCategory"
+            placeholder="ProductCategory"
+            required
+          />
+
+          <textarea
+            id="productDesc"
+            cols="30"
+            rows="5"
+            class="form-control mb-3"
+            placeholder="write desc..."
+          ></textarea>
+          <button class="btn btn-outline-light mb-5" disabled id="addBtn">
+            Add product <i class="fa-solid fa-plus"></i>
+          </button>
+          <input
+            onkeyup="search(this.value)"
+            type="text"
+            class="form-control mb-3"
+            placeholder="search by name....."
+          />
+          <table class="table table-stribed text-white">
+            <thead>
+              <th>productName</th>
+              <th>productPrice</th>
+              <th>ProductCategory</th>
+              <th>productDesc</th>
+              <th>Update</th>
+              <th>Delete</th>
+            </thead>
+            <tbody id="tableBody" class="text-white fs-3"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="fontawesome-free-6.2.0-web/js/all.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
